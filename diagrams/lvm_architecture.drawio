@@ -1,265 +1,203 @@
-<mxfile host="app.diagrams.net" modified="2026-02-25T10:00:00.000Z" agent="draw.io" version="21.0.0" type="device">
-  <diagram name="LVM Architecture" id="lvm-arch">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        
-        <!-- Title -->
-        <mxCell id="title" value="LVM (LOGICAL VOLUME MANAGER) ARCHITECTURE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
-          <mxGeometry x="400" y="20" width="600" height="40" as="geometry" />
-        </mxCell>
-        
-        <!-- Layer Labels -->
-        <mxCell id="layer-label" value="PHYSICAL&#xa;DEVICES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" vertex="1" parent="1">
-          <mxGeometry x="20" y="140" width="80" height="40" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="layer-pv" value="PHYSICAL&#xa;VOLUMES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" vertex="1" parent="1">
-          <mxGeometry x="20" y="290" width="80" height="40" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="layer-vg" value="VOLUME&#xa;GROUP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" vertex="1" parent="1">
-          <mxGeometry x="20" y="440" width="80" height="40" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="layer-lv" value="LOGICAL&#xa;VOLUMES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" vertex="1" parent="1">
-          <mxGeometry x="20" y="590" width="80" height="40" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="layer-fs" value="FILESYSTEMS&#xa;& MOUNTS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" vertex="1" parent="1">
-          <mxGeometry x="20" y="740" width="80" height="40" as="geometry" />
-        </mxCell>
-        
-        <!-- Physical Devices -->
-        <mxCell id="disk1" value="/dev/sdb&#xa;500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="100" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="disk2" value="/dev/sdc&#xa;500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="350" y="100" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="disk3" value="/dev/sdd&#xa;1TB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="550" y="100" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <!-- Arrows to PV -->
-        <mxCell id="arr1" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e94560;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="210" y="160" as="sourcePoint" />
-            <mxPoint x="210" y="230" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="arr1-label" value="pvcreate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#e94560;" vertex="1" connectable="0" parent="arr1">
-          <mxGeometry x="-0.2" relative="1" as="geometry">
-            <mxPoint x="25" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="arr2" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e94560;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="160" as="sourcePoint" />
-            <mxPoint x="410" y="230" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="arr3" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e94560;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="610" y="160" as="sourcePoint" />
-            <mxPoint x="610" y="230" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <!-- Physical Volumes -->
-        <mxCell id="pv1" value="PV&#xa;/dev/sdb" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="230" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="pv2" value="PV&#xa;/dev/sdc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="350" y="230" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="pv3" value="PV&#xa;/dev/sdd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="550" y="230" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <!-- Arrows to VG -->
-        <mxCell id="arr4" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#7209b7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pv1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="210" y="290" as="sourcePoint" />
-            <mxPoint x="380" y="380" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="210" y="340" />
-              <mxPoint x="380" y="340" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="arr5" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#7209b7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pv2">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="290" as="sourcePoint" />
-            <mxPoint x="410" y="380" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="arr6" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#7209b7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pv3">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="610" y="290" as="sourcePoint" />
-            <mxPoint x="440" y="380" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="610" y="340" />
-              <mxPoint x="440" y="340" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="vgcreate-label" value="vgcreate vg_data /dev/sdb /dev/sdc /dev/sdd" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#7209b7;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="315" width="300" height="20" as="geometry" />
-        </mxCell>
-        
-        <!-- Volume Group -->
-        <mxCell id="vg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="150" y="380" width="520" height="100" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="vg-label" value="Volume Group: vg_data (2TB total)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="150" y="385" width="520" height="25" as="geometry" />
-        </mxCell>
-        
-        <!-- Physical Extents -->
-        <mxCell id="pe-label" value="Physical Extents (PE): 4MB blocks - pooled storage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="150" y="415" width="520" height="20" as="geometry" />
-        </mxCell>
-        
-        <!-- PE blocks -->
-        <mxCell id="pe-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9d4edd;strokeColor=#7b2cbf;" vertex="1" parent="1">
-          <mxGeometry x="170" y="440" width="480" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="pe-blocks" value="| PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE |" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;" vertex="1" parent="1">
-          <mxGeometry x="170" y="443" width="480" height="24" as="geometry" />
-        </mxCell>
-        
-        <!-- Arrows to LV -->
-        <mxCell id="arr7" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#f72585;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="480" as="sourcePoint" />
-            <mxPoint x="280" y="540" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="arr8" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#f72585;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="540" y="480" as="sourcePoint" />
-            <mxPoint x="540" y="540" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="lvcreate-label" value="lvcreate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#f72585;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="500" width="80" height="20" as="geometry" />
-        </mxCell>
-        
-        <!-- Logical Volumes -->
-        <mxCell id="lv1" value="Logical Volume&#xa;lv_home&#xa;800GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f72585;strokeColor=#d91e6f;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="540" width="200" height="80" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="lv2" value="Logical Volume&#xa;lv_var&#xa;500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f72585;strokeColor=#d91e6f;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="540" width="200" height="80" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="lv-free" value="FREE&#xa;700GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#adb5bd;strokeColor=#868e96;fontColor=#1a1a2e;fontSize=11;fontStyle=2;" vertex="1" parent="1">
-          <mxGeometry x="180" y="625" width="460" height="25" as="geometry" />
-        </mxCell>
-        
-        <!-- Arrows to FS -->
-        <mxCell id="arr9" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#06d6a0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="620" as="sourcePoint" />
-            <mxPoint x="280" y="690" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="arr10" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#06d6a0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="540" y="620" as="sourcePoint" />
-            <mxPoint x="540" y="690" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        
-        <mxCell id="mkfs-label" value="mkfs.ext4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#06d6a0;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="650" width="80" height="20" as="geometry" />
-        </mxCell>
-        
-        <!-- Filesystems / Mounts -->
-        <mxCell id="mount1" value="ext4&#xa;/dev/vg_data/lv_home&#xa;mounted at /home" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontColor=#1a1a2e;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="690" width="200" height="80" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="mount2" value="xfs&#xa;/dev/vg_data/lv_var&#xa;mounted at /var" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontColor=#1a1a2e;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="690" width="200" height="80" as="geometry" />
-        </mxCell>
-        
-        <!-- Commands Reference -->
-        <mxCell id="cmds-header" value="LVM COMMANDS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
-          <mxGeometry x="850" y="80" width="200" height="30" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="cmds-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#0d0d17;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="750" y="120" width="350" height="400" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="cmds-pv" value="Physical Volumes:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#4361ee;" vertex="1" parent="1">
-          <mxGeometry x="770" y="130" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="cmds-pv-content" value="pvcreate /dev/sdb&#xa;pvs&#xa;pvdisplay" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="155" width="310" height="50" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="cmds-vg" value="Volume Groups:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#7209b7;" vertex="1" parent="1">
-          <mxGeometry x="770" y="210" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="cmds-vg-content" value="vgcreate vg_data /dev/sdb /dev/sdc&#xa;vgs&#xa;vgdisplay&#xa;vgextend vg_data /dev/sdd" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="235" width="310" height="70" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="cmds-lv" value="Logical Volumes:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#f72585;" vertex="1" parent="1">
-          <mxGeometry x="770" y="310" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="cmds-lv-content" value="lvcreate -n lv_home -L 800G vg_data&#xa;lvs&#xa;lvdisplay&#xa;lvextend -r -L +100G /dev/vg_data/lv_home" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="335" width="310" height="70" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="cmds-fs" value="Filesystem:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#06d6a0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="410" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="cmds-fs-content" value="mkfs.ext4 /dev/vg_data/lv_home&#xa;mount /dev/vg_data/lv_home /home&#xa;resize2fs /dev/vg_data/lv_home  # after lvextend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="435" width="320" height="70" as="geometry" />
-        </mxCell>
-        
-        <!-- Benefits -->
-        <mxCell id="benefits-header" value="LVM BENEFITS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
-          <mxGeometry x="850" y="540" width="200" height="30" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="benefits-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="750" y="580" width="350" height="160" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="benefits-content" value="✓ Dynamic resizing without unmounting&#xa;&#xa;✓ Span volumes across multiple disks&#xa;&#xa;✓ Create snapshots for backups&#xa;&#xa;✓ Easy disk addition/replacement&#xa;&#xa;✓ Thin provisioning support" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1a1a2e;" vertex="1" parent="1">
-          <mxGeometry x="770" y="595" width="310" height="130" as="geometry" />
-        </mxCell>
-        
-        <!-- Device Paths -->
-        <mxCell id="paths-header" value="DEVICE PATHS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
-          <mxGeometry x="850" y="760" width="200" height="25" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="paths-content" value="/dev/vg_data/lv_home  →  /dev/mapper/vg_data-lv_home" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="750" y="790" width="350" height="20" as="geometry" />
-        </mxCell>
-        
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="LVM Architecture" id="lvm-arch">
+        <mxGraphModel dx="666" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="LVM (LOGICAL VOLUME MANAGER) ARCHITECTURE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="20" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-label" value="PHYSICAL&#xa;DEVICES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="140" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-pv" value="PHYSICAL&#xa;VOLUMES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="290" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-vg" value="VOLUME&#xa;GROUP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="440" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-lv" value="LOGICAL&#xa;VOLUMES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="590" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-fs" value="FILESYSTEMS&#xa;&amp; MOUNTS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="740" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="disk1" value="/dev/sdb&#xa;500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="disk2" value="/dev/sdc&#xa;500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="disk3" value="/dev/sdd&#xa;1TB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr1" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e94560;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="210" y="160" as="sourcePoint"/>
+                        <mxPoint x="210" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr1-label" value="pvcreate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#e94560;" parent="arr1" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint x="25" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr2" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e94560;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="160" as="sourcePoint"/>
+                        <mxPoint x="410" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr3" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e94560;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="160" as="sourcePoint"/>
+                        <mxPoint x="610" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pv1" value="PV&#xa;/dev/sdb" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pv2" value="PV&#xa;/dev/sdc" style="rounded=1;whiteSpace:wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pv3" value="PV&#xa;/dev/sdd" style="rounded=1;whiteSpace:wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr4" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#7209b7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="pv1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="210" y="290" as="sourcePoint"/>
+                        <mxPoint x="380" y="380" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="210" y="340"/>
+                            <mxPoint x="380" y="340"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr5" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#7209b7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="pv2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="290" as="sourcePoint"/>
+                        <mxPoint x="410" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr6" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#7209b7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="pv3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="290" as="sourcePoint"/>
+                        <mxPoint x="440" y="380" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="610" y="340"/>
+                            <mxPoint x="440" y="340"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vgcreate-label" value="vgcreate vg_data /dev/sdb /dev/sdc /dev/sdd" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#7209b7;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="305" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="380" width="520" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="vg-label" value="Volume Group: vg_data (2TB total)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="385" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="pe-label" value="Physical Extents (PE): 4MB blocks - pooled storage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="415" width="520" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="pe-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9d4edd;strokeColor=#7b2cbf;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="440" width="480" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="pe-blocks" value="| PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE | PE |" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="443" width="480" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr7" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#f72585;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="480" as="sourcePoint"/>
+                        <mxPoint x="280" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr8" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#f72585;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="480" as="sourcePoint"/>
+                        <mxPoint x="540" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lvcreate-label" value="lvcreate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#f72585;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="500" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv1" value="Logical Volume&#xa;lv_home&#xa;800GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f72585;strokeColor=#d91e6f;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="540" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv2" value="Logical Volume&#xa;lv_var&#xa;500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f72585;strokeColor=#d91e6f;fontColor=#ffffff;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="540" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv-free" value="FREE&#xa;700GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#adb5bd;strokeColor=#868e96;fontColor=#1a1a2e;fontSize=11;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="625" width="460" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr9" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#06d6a0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="620" as="sourcePoint"/>
+                        <mxPoint x="280" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr10" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#06d6a0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="620" as="sourcePoint"/>
+                        <mxPoint x="540" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mkfs-label" value="mkfs.ext4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#06d6a0;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="650" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="mount1" value="ext4&#xa;/dev/vg_data/lv_home&#xa;mounted at /home" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontColor=#1a1a2e;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="690" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="mount2" value="xfs&#xa;/dev/vg_data/lv_var&#xa;mounted at /var" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontColor=#1a1a2e;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="690" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-header" value="LVM COMMANDS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="80" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#1a1a2e;strokeColor=#0d0d17;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="120" width="350" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-pv" value="Physical Volumes:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#4361ee;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="130" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-pv-content" value="pvcreate /dev/sdb&#xa;pvs&#xa;pvdisplay" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="155" width="310" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-vg" value="Volume Groups:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#7209b7;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="210" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-vg-content" value="vgcreate vg_data /dev/sdb /dev/sdc&#xa;vgs&#xa;vgdisplay&#xa;vgextend vg_data /dev/sdd" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="235" width="310" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-lv" value="Logical Volumes:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#f72585;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="310" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-lv-content" value="lvcreate -n lv_home -L 800G vg_data&#xa;lvs&#xa;lvdisplay&#xa;lvextend -r -L +100G /dev/vg_data/lv_home" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="335" width="310" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-fs" value="Filesystem:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#06d6a0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="410" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmds-fs-content" value="mkfs.ext4 /dev/vg_data/lv_home&#xa;mount /dev/vg_data/lv_home /home&#xa;resize2fs /dev/vg_data/lv_home  # after lvextend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="435" width="320" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="benefits-header" value="LVM BENEFITS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="540" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="benefits-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="580" width="350" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="benefits-content" value="✓ Dynamic resizing without unmounting&#xa;&#xa;✓ Span volumes across multiple disks&#xa;&#xa;✓ Create snapshots for backups&#xa;&#xa;✓ Easy disk addition/replacement&#xa;&#xa;✓ Thin provisioning support" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="595" width="310" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="paths-header" value="DEVICE PATHS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="760" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="paths-content" value="/dev/vg_data/lv_home  →  /dev/mapper/vg_data-lv_home" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="790" width="350" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
