@@ -1,0 +1,313 @@
+<mxfile host="app.diagrams.net" modified="2026-02-25T10:00:00.000Z" agent="draw.io" version="21.0.0" type="device">
+  <diagram name="Processes Overview" id="processes">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="LINUX PROCESSES &amp; JOBS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="450" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Process Hierarchy -->
+        <mxCell id="hier-header" value="PROCESS HIERARCHY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="250" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hier-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#0d0d17;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="105" width="350" height="270" as="geometry" />
+        </mxCell>
+        
+        <!-- Process tree visualization -->
+        <mxCell id="pid0" value="Kernel&#xa;(PID 0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr0" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#06d6a0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="160" as="sourcePoint" />
+            <mxPoint x="210" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="pid1" value="systemd&#xa;(PID 1)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f72585;strokeColor=#d91e6f;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="180" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr1a" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#06d6a0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="185" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arr1b" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#06d6a0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="220" as="sourcePoint" />
+            <mxPoint x="210" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arr1c" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#06d6a0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="235" y="220" as="sourcePoint" />
+            <mxPoint x="300" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="sshd" value="sshd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="70" y="245" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="nginx" value="nginx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="180" y="245" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cron" value="cron" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="290" y="245" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-ssh" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#adb5bd;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="275" as="sourcePoint" />
+            <mxPoint x="100" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="bash" value="bash" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="70" y="300" width="60" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-bash" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#adb5bd;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="325" as="sourcePoint" />
+            <mxPoint x="100" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="vim" value="vim" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd166;strokeColor=#e6bc5c;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="70" y="345" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hier-legend" value="pstree  # View process tree&#xa;ps -ef  # All processes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="310" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Process States -->
+        <mxCell id="states-header" value="PROCESS STATES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="530" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="states-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="105" width="350" height="270" as="geometry" />
+        </mxCell>
+        
+        <!-- State diagram -->
+        <mxCell id="state-new" value="NEW" style="ellipse;whiteSpace=wrap;html=1;fillColor=#adb5bd;strokeColor=#868e96;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="130" width="70" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-new" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="147" as="sourcePoint" />
+            <mxPoint x="570" y="147" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-ready" value="READY&#xa;(R)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffd166;strokeColor=#e6bc5c;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="125" width="70" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-ready-run" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="140" as="sourcePoint" />
+            <mxPoint x="700" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-run" value="RUNNING&#xa;(R)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="125" width="70" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-run-ready" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="160" as="sourcePoint" />
+            <mxPoint x="640" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arr-run-wait" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="735" y="170" as="sourcePoint" />
+            <mxPoint x="735" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-wait" value="SLEEPING" style="ellipse;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;fontColor=#ffffff;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="695" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-wait-s" value="S" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="650" y="210" width="30" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-wait-d" value="D (uninterrupt)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="650" y="225" width="100" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-wait-ready" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="695" y="220" as="sourcePoint" />
+            <mxPoint x="605" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arr-run-stop" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="147" as="sourcePoint" />
+            <mxPoint x="560" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-stop" value="STOPPED&#xa;(T)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e94560;strokeColor=#c73e54;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="200" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-run-zombie" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="735" y="170" as="sourcePoint" />
+            <mxPoint x="600" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-zombie" value="ZOMBIE (Z)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="280" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arr-zombie-exit" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="300" as="sourcePoint" />
+            <mxPoint x="710" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-exit" value="EXIT" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#ffffff;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="280" width="60" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="states-legend" value="R=Running/Runnable  S=Sleeping  D=Disk  T=Stopped  Z=Zombie" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="430" y="335" width="330" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Process Commands -->
+        <mxCell id="cmds-header" value="PROCESS COMMANDS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="950" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cmds-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="800" y="105" width="280" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cmds-content" value="# View processes&#xa;ps aux         # All processes&#xa;ps -ef         # Full format&#xa;ps -u user     # User's processes&#xa;top / htop     # Interactive&#xa;pstree         # Tree view&#xa;&#xa;# Process info&#xa;pidof nginx    # Get PID&#xa;pgrep -l ssh   # Search processes&#xa;&#xa;# Send signals&#xa;kill PID       # Send SIGTERM&#xa;kill -9 PID    # Force kill&#xa;kill -STOP PID # Pause&#xa;kill -CONT PID # Resume&#xa;killall name   # Kill by name&#xa;pkill pattern  # Kill by pattern" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="810" y="115" width="260" height="255" as="geometry" />
+        </mxCell>
+        
+        <!-- Job Control -->
+        <mxCell id="jobs-header" value="JOB CONTROL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="120" y="390" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jobs-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7209b7;strokeColor=#5f0896;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="425" width="350" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jobs-content" value="# Background / Foreground&#xa;command &amp;        # Run in background&#xa;Ctrl+Z           # Suspend current job&#xa;bg               # Resume in background&#xa;fg               # Resume in foreground&#xa;fg %1            # Bring job 1 to foreground&#xa;jobs             # List jobs&#xa;&#xa;# Disown&#xa;disown           # Remove from job table&#xa;disown -h %1     # Keep running on logout&#xa;nohup cmd &amp;      # Immune to hangup" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="50" y="435" width="330" height="185" as="geometry" />
+        </mxCell>
+        
+        <!-- Signals -->
+        <mxCell id="sig-header" value="COMMON SIGNALS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="530" y="390" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sig-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd166;strokeColor=#e6bc5c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="425" width="350" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sig-content" value="Signal     #    Description           Key&#xa;─────────────────────────────────────────────&#xa;SIGHUP     1    Hangup / reload config&#xa;SIGINT     2    Interrupt              Ctrl+C&#xa;SIGQUIT    3    Quit with core dump    Ctrl+\&#xa;SIGKILL    9    Force kill (no catch)&#xa;SIGTERM   15    Graceful terminate&#xa;SIGSTOP   19    Pause (no catch)       Ctrl+Z&#xa;SIGCONT   18    Continue&#xa;SIGUSR1   10    User-defined 1&#xa;SIGUSR2   12    User-defined 2" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="430" y="435" width="330" height="185" as="geometry" />
+        </mxCell>
+        
+        <!-- Nice / Priority -->
+        <mxCell id="nice-header" value="PROCESS PRIORITY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="950" y="390" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="nice-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="800" y="425" width="280" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="nice-content" value="# Nice values: -20 (highest) to 19 (lowest)&#xa;# Default: 0&#xa;&#xa;# Start with priority&#xa;nice -n 10 command    # Lower priority&#xa;nice -n -5 command    # Higher (root)&#xa;&#xa;# Change running process&#xa;renice 10 -p PID      # Set nice to 10&#xa;renice -5 -u user     # All user's procs&#xa;&#xa;# View priority&#xa;ps -l                 # PRI/NI columns&#xa;top                   # NI column" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="810" y="435" width="260" height="185" as="geometry" />
+        </mxCell>
+        
+        <!-- Job Flow -->
+        <mxCell id="flow-header" value="JOB LIFECYCLE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="200" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e94560;strokeColor=#c73e54;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="670" width="350" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jf1" value="FG" style="ellipse;whiteSpace=wrap;html=1;fillColor=#06d6a0;strokeColor=#05b587;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="700" width="50" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jf-arr1" value="Ctrl+Z" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="717" as="sourcePoint" />
+            <mxPoint x="170" y="717" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="jf2" value="STOP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffd166;strokeColor=#e6bc5c;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="700" width="50" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jf-arr2" value="bg" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="710" as="sourcePoint" />
+            <mxPoint x="280" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="jf3" value="BG" style="ellipse;whiteSpace=wrap;html=1;fillColor=#4361ee;strokeColor=#3a56d4;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="700" width="50" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jf-arr3" value="fg" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ffffff;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="730" as="sourcePoint" />
+            <mxPoint x="110" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Useful Commands Quick Reference -->
+        <mxCell id="qr-header" value="⚡ QUICK COMMANDS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="600" y="640" width="250" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="qr-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#495057;strokeColor=#343a40;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="670" width="660" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="qr-content" value="ps aux | grep nginx         # Find process          htop                        # Interactive monitor&#xa;kill -9 $(pgrep python)     # Kill all python        watch -n 1 ps aux           # Monitor every 1s&#xa;nohup ./script.sh &amp;         # Run detached           strace -p PID               # Trace syscalls&#xa;lsof -p PID                 # Open files by PID      /proc/PID/                  # Process info in procfs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#06d6a0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="690" width="620" height="70" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

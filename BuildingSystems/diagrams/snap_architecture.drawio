@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram name="Snap Simplified" id="snap-simple">
+        <mxGraphModel dx="971" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdfcf0;strokeColor=#dee2e6;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="60" width="1000" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="SNAP &amp; UBUNTU CORE: THE SAFETY STACK" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#e95420;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="20" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="store-cloud" value="SNAP STORE (The Cloud)\nApp Distribution &amp; Security Checks" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e95420;fontStyle=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="100" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="stack-box" value="YOUR DEVICE / EMBEDDED SYSTEM" style="swimlane;horizontal=1;startSize=30;fillColor=#ffffff;strokeColor=#333333;fontColor=#333333;fontSize=14;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="100" width="600" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-apps" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;1. THE APPS (User Software)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7f3ff;strokeColor=#007bff;fontSize=13;fontStyle=1;" parent="stack-box" vertex="1">
+                    <mxGeometry x="40" y="40" width="520" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="app1" value="Web Browser" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#007bff;fontSize=10;" parent="layer-apps" vertex="1">
+                    <mxGeometry x="30" y="10" width="90" height="33.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="app2" value="IoT Agent" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#007bff;fontSize=10;" parent="layer-apps" vertex="1">
+                    <mxGeometry x="140" y="10" width="90" height="33.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="app3" value="Database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#007bff;fontSize=10;" parent="layer-apps" vertex="1">
+                    <mxGeometry x="250" y="10" width="90" height="33.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="apps-note" value="Each app runs in its own &#39;Prison&#39; (Sandbox).\nIt cannot see other apps or your setup unless permitted." style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2;fontColor=#0056b3;" parent="layer-apps" vertex="1">
+                    <mxGeometry x="350" y="33.75" width="160" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-mgr" value="2. THE MANAGER (snapd - The Brain)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff0f3;strokeColor=#ff4d6d;fontSize=13;fontStyle=1;" parent="stack-box" vertex="1">
+                    <mxGeometry x="40" y="170" width="520" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="mgr-logic" value="• Downloads updates automatically\n• Verifies signatures (No malware)\n• Bridges the gap between Apps &amp; Hardware" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#a4133c;" parent="layer-mgr" vertex="1">
+                    <mxGeometry x="20" width="480" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer-base" value="3. THE FOUNDATION (The Core System)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6fff8;strokeColor=#2d6a4f;fontSize=13;fontStyle=1;" parent="stack-box" vertex="1">
+                    <mxGeometry x="40" y="320" width="520" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="core-snap" value="BASE SNAP (OS Root)\n(Libraries/Binaries)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=10;" parent="layer-base" vertex="1">
+                    <mxGeometry x="30" y="20" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="kernel-snap" value="KERNEL SNAP\n(Drivers/Hardware)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=10;" parent="layer-base" vertex="1">
+                    <mxGeometry x="190" y="20" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="gadget-snap" value="GADGET SNAP\n(Boot/Partitioning)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=10;" parent="layer-base" vertex="1">
+                    <mxGeometry x="350" y="20" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="interfaces" value="INTERFACES (Plugs ↔ Slots)\nThis is how an app asks to use the Camera, Network, or USB." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#6c757d;fontSize=11;fontStyle=1;" parent="layer-base" vertex="1">
+                    <mxGeometry x="30" y="100" width="460" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="stack-flow1" value="" style="endArrow=block;startArrow=block;html=1;strokeWidth=2;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="stack-box" source="layer-apps" target="layer-mgr" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="stack-flow2" value="" style="endArrow=block;startArrow=block;html=1;strokeWidth=2;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="stack-box" source="layer-mgr" target="layer-base" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="update-flow" value="Updates &amp; Installs" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#e95420;exitX=0;exitY=0.5;entryX=1;entryY=0.5;fontStyle=1;fontSize=10;fontColor=#e95420;" parent="1" source="store-cloud" target="layer-mgr" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="summary" value="Simplified Summary: Snap package everything your app needs into one secure box. &#39;snapd&#39; manages these boxes, making sure they are up-to-date and cannot harm the rest of the system. Even the OS itself (Core/Kernel) is a &#39;box&#39; that can be safely updated without breaking the device." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;fontColor=#495057;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="610" width="920" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

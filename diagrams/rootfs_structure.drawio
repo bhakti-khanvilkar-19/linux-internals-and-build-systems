@@ -1,0 +1,307 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.5.2">
+  <diagram name="RootFS Structure" id="rootfs-structure-main">
+    <mxGraphModel dx="1111" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 28px;&quot;&gt;Linux Root Filesystem (RootFS) Structure&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="600" x="500" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#666666;" value="Filesystem Hierarchy Standard (FHS) - Where Everything Lives" vertex="1">
+          <mxGeometry height="30" width="500" x="550" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="root-node" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;strokeWidth=3;fontColor=#ffffff;fontSize=20;" value="&lt;b&gt;/&lt;/b&gt;&lt;br&gt;(Root)" vertex="1">
+          <mxGeometry height="60" width="100" x="850" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bin-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="bin-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#2e7d32;fontSize=14;" value="&lt;b&gt;/bin, /sbin&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Essential Binaries&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="bin-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• ls, cp, mv, cat, echo&lt;br&gt;• bash, sh (shells)&lt;br&gt;• mount, umount&lt;br&gt;• ip, ifconfig&lt;br&gt;• systemctl, journalctl&lt;br&gt;&lt;br&gt;&lt;i&gt;Modern: symlinks to /usr/bin&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="50" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="etc-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff9800;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="240" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="etc-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#e65100;fontSize=14;" value="&lt;b&gt;/etc&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Configuration Files&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="250" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="etc-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• passwd, shadow (users)&lt;br&gt;• fstab (mount table)&lt;br&gt;• hostname&lt;br&gt;• network/, netplan/&lt;br&gt;• systemd/ (services)&lt;br&gt;• apt/, yum.repos.d/" vertex="1">
+          <mxGeometry height="100" width="160" x="250" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="usr-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#2196f3;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="440" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="usr-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#1565c0;fontSize=14;" value="&lt;b&gt;/usr&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;User Programs &amp;amp; Data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="450" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="usr-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• bin/ (applications)&lt;br&gt;• lib/ (libraries)&lt;br&gt;• share/ (docs, man)&lt;br&gt;• local/ (custom installs)&lt;br&gt;• include/ (headers)&lt;br&gt;&lt;br&gt;&lt;i&gt;Largest directory!&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="450" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="var-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#e91e63;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="640" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="var-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#c2185b;fontSize=14;" value="&lt;b&gt;/var&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Variable Data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="650" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="var-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• log/ (system logs)&lt;br&gt;• cache/ (app caches)&lt;br&gt;• lib/ (databases, state)&lt;br&gt;• spool/ (mail, print)&lt;br&gt;• tmp/ (persistent temp)&lt;br&gt;&lt;br&gt;&lt;i&gt;Changes during runtime&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="650" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="home-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eaf6;strokeColor=#3f51b5;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="840" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="home-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#283593;fontSize=14;" value="&lt;b&gt;/home, /root&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;User Directories&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="850" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="home-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• /home/username/&lt;br&gt;  - .bashrc, .profile&lt;br&gt;  - .config/ (XDG)&lt;br&gt;  - Documents/, Downloads/&lt;br&gt;• /root (root&#39;s home)&lt;br&gt;&lt;br&gt;&lt;i&gt;User personal files&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="850" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#9c27b0;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="1040" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#7b1fa2;fontSize=14;" value="&lt;b&gt;/boot&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Boot Files&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="1050" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• vmlinuz-* (kernel)&lt;br&gt;• initrd.img-* (initramfs)&lt;br&gt;• config-* (kernel config)&lt;br&gt;• System.map-*&lt;br&gt;• grub/ (bootloader)&lt;br&gt;&lt;br&gt;&lt;i&gt;Often separate partition&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="1050" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="lib-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="180" x="1240" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lib-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#00695c;fontSize=14;" value="&lt;b&gt;/lib, /lib64&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Essential Libraries&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="1250" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="lib-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• libc.so.6 (C library)&lt;br&gt;• ld-linux.so (loader)&lt;br&gt;• modules/ (kernel mods)&lt;br&gt;• firmware/ (blobs)&lt;br&gt;&lt;br&gt;&lt;i&gt;Modern: symlinks to /usr/lib&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="1250" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="vfs-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#666666;" value="&lt;b&gt;VIRTUAL FILESYSTEMS&lt;/b&gt; (Kernel-generated, not on disk)" vertex="1">
+          <mxGeometry height="30" width="500" x="500" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="dev-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="210" width="220" x="240" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="dev-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#c62828;fontSize=14;" value="&lt;b&gt;/dev&lt;/b&gt; (devtmpfs)&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Device Nodes&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="260" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="dev-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;Block devices:&lt;/b&gt;&lt;br&gt;• sda, sdb (SATA disks)&lt;br&gt;• nvme0n1 (NVMe SSD)&lt;br&gt;&lt;br&gt;&lt;b&gt;Character devices:&lt;/b&gt;&lt;br&gt;• tty, pts/ (terminals)&lt;br&gt;• null, zero, random&lt;br&gt;• ttyUSB0 (serial)&lt;br&gt;&lt;br&gt;&lt;i&gt;Created by udev daemon&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="250" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="proc-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#ffc107;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="210" width="220" x="490" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="proc-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#f57f17;fontSize=14;" value="&lt;b&gt;/proc&lt;/b&gt; (procfs)&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Process Information&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="510" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="proc-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;Per-process:&lt;/b&gt;&lt;br&gt;• /proc/[PID]/status&lt;br&gt;• /proc/[PID]/cmdline&lt;br&gt;&lt;br&gt;&lt;b&gt;System info:&lt;/b&gt;&lt;br&gt;• cpuinfo, meminfo&lt;br&gt;• filesystems&lt;br&gt;&lt;br&gt;&lt;b&gt;Tuning:&lt;/b&gt;&lt;br&gt;• /proc/sys/net/...&lt;br&gt;• /proc/sys/kernel/..." vertex="1">
+          <mxGeometry height="120" width="200" x="500" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#03a9f4;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="210" width="220" x="740" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#0277bd;fontSize=14;" value="&lt;b&gt;/sys&lt;/b&gt; (sysfs)&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Hardware/Driver Info&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="760" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;Device classes:&lt;/b&gt;&lt;br&gt;• /sys/class/net/&lt;br&gt;• /sys/class/block/&lt;br&gt;• /sys/class/gpio/&lt;br&gt;&lt;br&gt;&lt;b&gt;Device tree:&lt;/b&gt;&lt;br&gt;• /sys/devices/...&lt;br&gt;&lt;br&gt;&lt;b&gt;Power management:&lt;/b&gt;&lt;br&gt;• /sys/power/state" vertex="1">
+          <mxGeometry height="120" width="200" x="750" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="run-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#8bc34a;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="180" width="220" x="990" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="run-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#558b2f;fontSize=14;" value="&lt;b&gt;/run&lt;/b&gt; (tmpfs)&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Runtime Data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="1010" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="run-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="• PID files (.pid)&lt;br&gt;• Socket files (.sock)&lt;br&gt;• Lock files&lt;br&gt;• /run/user/1000/&lt;br&gt;• /run/systemd/&lt;br&gt;&lt;br&gt;&lt;i&gt;Cleared on each boot&lt;/i&gt;&lt;br&gt;&lt;i&gt;Stored in RAM (tmpfs)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="1000" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="types-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#666666;" value="&lt;b&gt;ROOTFS STORAGE TYPES&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="500" x="500" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="disk-type" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="280" x="80" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="disk-type-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#2e7d32;fontSize=14;" value="&lt;b&gt;💾 DISK-BASED&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="180" x="130" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="disk-type-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;ext4:&lt;/b&gt; Most common, journaling&lt;br&gt;&lt;b&gt;btrfs:&lt;/b&gt; Snapshots, compression&lt;br&gt;&lt;b&gt;XFS:&lt;/b&gt; High performance&lt;br&gt;&lt;b&gt;f2fs:&lt;/b&gt; Flash-friendly (SSD/eMMC)" vertex="1">
+          <mxGeometry height="80" width="260" x="90" y="775" as="geometry" />
+        </mxCell>
+        <mxCell id="flash-type" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="280" x="400" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="flash-type-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#1565c0;fontSize=14;" value="&lt;b&gt;⚡ FLASH-BASED (Embedded)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="220" x="430" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="flash-type-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;squashfs:&lt;/b&gt; Read-only, compressed&lt;br&gt;&lt;b&gt;UBIFS:&lt;/b&gt; Raw NAND with wear-leveling&lt;br&gt;&lt;b&gt;JFFS2:&lt;/b&gt; Older flash filesystem&lt;br&gt;&lt;i&gt;Used in routers, IoT, live CDs&lt;/i&gt;" vertex="1">
+          <mxGeometry height="80" width="260" x="410" y="775" as="geometry" />
+        </mxCell>
+        <mxCell id="ram-type" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#d32f2f;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="280" x="720" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="ram-type-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#c62828;fontSize=14;" value="&lt;b&gt;🧠 MEMORY-BASED (RAM)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="200" x="760" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="ram-type-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;tmpfs:&lt;/b&gt; Temporary storage in RAM&lt;br&gt;&lt;b&gt;initramfs:&lt;/b&gt; Early boot rootfs&lt;br&gt;&lt;b&gt;ramfs:&lt;/b&gt; Simple RAM filesystem&lt;br&gt;&lt;i&gt;Fast but volatile (lost on reboot)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="80" width="260" x="730" y="775" as="geometry" />
+        </mxCell>
+        <mxCell id="net-type" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#8e24aa;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="280" x="1040" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="net-type-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#7b1fa2;fontSize=14;" value="&lt;b&gt;🌐 NETWORK-BASED&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="200" x="1080" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="net-type-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;NFS:&lt;/b&gt; Network File System&lt;br&gt;&lt;b&gt;iSCSI:&lt;/b&gt; Block-level network storage&lt;br&gt;&lt;i&gt;Used for diskless clients,&lt;/i&gt;&lt;br&gt;&lt;i&gt;thin clients, clusters&lt;/i&gt;" vertex="1">
+          <mxGeometry height="80" width="260" x="1050" y="775" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#666666;" value="&lt;b&gt;ROOTFS IN BOOT PROCESS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="500" x="500" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-step1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="&lt;b&gt;1. GRUB&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;root=/dev/sda2&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="100" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-arrow1" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="980" as="sourcePoint" />
+            <mxPoint x="320" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="boot-step2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="&lt;b&gt;2. Kernel&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Loads initramfs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="330" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-arrow2" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="980" as="sourcePoint" />
+            <mxPoint x="550" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="boot-step3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="&lt;b&gt;3. initramfs&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Load drivers, find rootfs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="560" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-arrow3" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="710" y="980" as="sourcePoint" />
+            <mxPoint x="780" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="boot-step4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="&lt;b&gt;4. switch_root&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Mount real rootfs as /&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="790" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="boot-arrow4" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="940" y="980" as="sourcePoint" />
+            <mxPoint x="1010" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="boot-step5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" value="&lt;b&gt;5. /sbin/init&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;systemd starts (PID 1)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="1020" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="compare-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#666666;" value="&lt;b&gt;DESKTOP vs EMBEDDED ROOTFS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="500" x="500" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="desktop-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="240" width="350" x="240" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="desktop-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#2e7d32;fontSize=16;" value="&lt;b&gt;🖥️ DESKTOP/SERVER&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;(Ubuntu, Fedora, etc.)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="250" x="290" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="desktop-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;Size:&lt;/b&gt; 5GB - 50GB+&lt;br&gt;&lt;b&gt;Filesystem:&lt;/b&gt; ext4, btrfs&lt;br&gt;&lt;b&gt;C Library:&lt;/b&gt; glibc (~2MB)&lt;br&gt;&lt;b&gt;Init:&lt;/b&gt; systemd (full featured)&lt;br&gt;&lt;b&gt;Shell:&lt;/b&gt; bash, zsh (full)&lt;br&gt;&lt;b&gt;Utilities:&lt;/b&gt; GNU coreutils&lt;br&gt;&lt;b&gt;Package manager:&lt;/b&gt; apt, dnf, pacman&lt;br&gt;&lt;b&gt;Mode:&lt;/b&gt; Read-write&lt;br&gt;&lt;br&gt;✓ Multiple users, /home directories&lt;br&gt;✓ Full documentation&lt;br&gt;✓ GUI support" vertex="1">
+          <mxGeometry height="140" width="330" x="250" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="embedded-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="240" width="350" x="630" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="embedded-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#1565c0;fontSize=16;" value="&lt;b&gt;📟 EMBEDDED&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;(Yocto, Buildroot, OpenWrt)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="250" x="680" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="embedded-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="&lt;b&gt;Size:&lt;/b&gt; 8MB - 500MB&lt;br&gt;&lt;b&gt;Filesystem:&lt;/b&gt; squashfs, ubifs&lt;br&gt;&lt;b&gt;C Library:&lt;/b&gt; musl (~100KB)&lt;br&gt;&lt;b&gt;Init:&lt;/b&gt; BusyBox init (minimal)&lt;br&gt;&lt;b&gt;Shell:&lt;/b&gt; ash (BusyBox)&lt;br&gt;&lt;b&gt;Utilities:&lt;/b&gt; BusyBox (single binary!)&lt;br&gt;&lt;b&gt;Package manager:&lt;/b&gt; None (image-based)&lt;br&gt;&lt;b&gt;Mode:&lt;/b&gt; Often read-only&lt;br&gt;&lt;br&gt;✓ Fast boot, minimal resources&lt;br&gt;✓ Wear-leveling aware&lt;br&gt;✓ Custom-built for hardware" vertex="1">
+          <mxGeometry height="140" width="330" x="640" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="root-to-bin" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=0;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="190" />
+            </Array>
+            <mxPoint x="860" y="170" as="sourcePoint" />
+            <mxPoint x="130" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="root-to-etc" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=0;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="190" />
+            </Array>
+            <mxPoint x="870" y="170" as="sourcePoint" />
+            <mxPoint x="330" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="root-to-usr" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=0;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="190" />
+            </Array>
+            <mxPoint x="880" y="170" as="sourcePoint" />
+            <mxPoint x="530" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="root-to-var" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="190" />
+            </Array>
+            <mxPoint x="900" y="170" as="sourcePoint" />
+            <mxPoint x="730" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="root-to-home" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="190" />
+            </Array>
+            <mxPoint x="900" y="170" as="sourcePoint" />
+            <mxPoint x="930" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="root-to-boot" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=1;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="190" />
+            </Array>
+            <mxPoint x="930" y="170" as="sourcePoint" />
+            <mxPoint x="1130" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="root-to-lib" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1;exitX=1;exitY=1;entryX=0.5;entryY=0;strokeColor=#666666;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="190" />
+            </Array>
+            <mxPoint x="940" y="170" as="sourcePoint" />
+            <mxPoint x="1330" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="140" width="180" x="1440" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" value="&lt;b&gt;LEGEND&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="100" x="1480" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-solid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="1450" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-solid-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="On-disk directories" vertex="1">
+          <mxGeometry height="20" width="130" x="1480" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-dashed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="1450" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-dashed-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Virtual filesystems" vertex="1">
+          <mxGeometry height="20" width="130" x="1480" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-fhs" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" value="&lt;i&gt;FHS = Filesystem&lt;br&gt;Hierarchy Standard&lt;/i&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="1450" y="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,555 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="29.5.2">
+  <diagram name="Distro Family Tree" id="distro-family-tree">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 28px;&quot;&gt;Linux Distribution Family Tree&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry x="550" y="20" width="500" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#666666;" value="How distributions inherit from each other — Package Managers, Release Models, and Target Audiences" vertex="1">
+          <mxGeometry x="400" y="60" width="800" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Linux Kernel (Root) -->
+        <mxCell id="kernel-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;strokeWidth=3;fontColor=#ffffff;fontSize=16;" value="&lt;b&gt;🐧 LINUX KERNEL&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;kernel.org&lt;/font&gt;" vertex="1">
+          <mxGeometry x="750" y="110" width="200" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Family Dividers -->
+        <mxCell id="family-line" parent="1" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#666666;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="220" as="sourcePoint" />
+            <mxPoint x="1500" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Vertical lines from kernel -->
+        <mxCell id="k-to-debian" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E95420;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="180" as="sourcePoint" />
+            <mxPoint x="360" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="k-to-redhat" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC0000;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="850" y="180" as="sourcePoint" />
+            <mxPoint x="850" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="k-to-independent" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1793D1;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="180" as="sourcePoint" />
+            <mxPoint x="1340" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1340" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ====================== DEBIAN FAMILY ====================== -->
+        <mxCell id="debian-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#A80030;" value="&lt;b&gt;DEBIAN FAMILY&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;.deb packages | apt/dpkg&lt;/font&gt;" vertex="1">
+          <mxGeometry x="200" y="230" width="320" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Debian -->
+        <mxCell id="debian-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A80030;strokeColor=#6b0020;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="280" y="280" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="debian-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🌀 DEBIAN&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Founded 1993&lt;/font&gt;" vertex="1">
+          <mxGeometry x="290" y="285" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="debian-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Package: .deb&lt;br&gt;• Manager: apt, dpkg&lt;br&gt;• Release: Stable (~2yr)&lt;br&gt;• Focus: Stability&lt;br&gt;• Branches: stable/testing/sid" vertex="1">
+          <mxGeometry x="290" y="320" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- Ubuntu -->
+        <mxCell id="ubuntu-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E95420;strokeColor=#c44117;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="130" y="450" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ubuntu-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🟠 UBUNTU&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Canonical (2004)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="140" y="455" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="ubuntu-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Based on: Debian&lt;br&gt;• Package: .deb&lt;br&gt;• Manager: apt, snap&lt;br&gt;• Release: LTS (2yr) + interim&lt;br&gt;• Desktop: GNOME&lt;br&gt;• Best for: Beginners, servers" vertex="1">
+          <mxGeometry x="140" y="490" width="140" height="95" as="geometry" />
+        </mxCell>
+        
+        <!-- Linux Mint -->
+        <mxCell id="mint-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87cf3e;strokeColor=#5da82a;strokeWidth=2;fontColor=#333333;" value="" vertex="1">
+          <mxGeometry x="320" y="450" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mint-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#333333;fontSize=14;" value="&lt;b&gt;🍃 LINUX MINT&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Community (2006)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="330" y="455" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="mint-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#333333;fontSize=10;" value="• Based on: Ubuntu/Debian&lt;br&gt;• Package: .deb&lt;br&gt;• Manager: apt&lt;br&gt;• Desktop: Cinnamon&lt;br&gt;• Best for: Windows converts&lt;br&gt;• Focus: Ease of use" vertex="1">
+          <mxGeometry x="330" y="490" width="140" height="95" as="geometry" />
+        </mxCell>
+        
+        <!-- Ubuntu derivatives -->
+        <mxCell id="ubuntu-flavors" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry x="50" y="630" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ubuntu-flavors-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#b85450;fontSize=12;" value="&lt;b&gt;Ubuntu Flavors&lt;/b&gt;" vertex="1">
+          <mxGeometry x="130" y="635" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ubuntu-flavors-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" value="• &lt;b&gt;Kubuntu&lt;/b&gt; - KDE Plasma desktop&lt;br&gt;• &lt;b&gt;Xubuntu&lt;/b&gt; - XFCE (lightweight)&lt;br&gt;• &lt;b&gt;Lubuntu&lt;/b&gt; - LXQt (very light)&lt;br&gt;• &lt;b&gt;Pop!_OS&lt;/b&gt; - System76 (developers)&lt;br&gt;• &lt;b&gt;elementary OS&lt;/b&gt; - macOS-like" vertex="1">
+          <mxGeometry x="60" y="655" width="300" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrows in Debian family -->
+        <mxCell id="deb-to-ubuntu" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E95420;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="400" as="sourcePoint" />
+            <mxPoint x="210" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="deb-to-mint" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#87cf3e;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="400" as="sourcePoint" />
+            <mxPoint x="400" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="ubuntu-to-flavors" parent="1" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#E95420;dashed=1;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="590" as="sourcePoint" />
+            <mxPoint x="210" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ====================== RED HAT FAMILY ====================== -->
+        <mxCell id="redhat-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#CC0000;" value="&lt;b&gt;RED HAT FAMILY&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;.rpm packages | dnf/yum&lt;/font&gt;" vertex="1">
+          <mxGeometry x="690" y="230" width="320" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Red Hat / Fedora Side -->
+        <mxCell id="fedora-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#294172;strokeColor=#1a2c4e;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="620" y="280" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fedora-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🎩 FEDORA&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Red Hat sponsored&lt;/font&gt;" vertex="1">
+          <mxGeometry x="630" y="285" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fedora-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Package: .rpm&lt;br&gt;• Manager: dnf&lt;br&gt;• Release: ~6 months&lt;br&gt;• Focus: Latest tech&lt;br&gt;• SELinux enabled" vertex="1">
+          <mxGeometry x="630" y="320" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- RHEL -->
+        <mxCell id="rhel-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CC0000;strokeColor=#990000;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="820" y="280" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rhel-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🔴 RHEL&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Enterprise (paid)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="830" y="285" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="rhel-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Package: .rpm&lt;br&gt;• Manager: dnf/yum&lt;br&gt;• Release: ~3 years LTS&lt;br&gt;• Focus: Enterprise support&lt;br&gt;• 10+ year lifecycle" vertex="1">
+          <mxGeometry x="830" y="320" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- CentOS Stream -->
+        <mxCell id="centos-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#932279;strokeColor=#6e1a5a;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="620" y="450" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="centos-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🌊 CENTOS STREAM&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;RHEL preview&lt;/font&gt;" vertex="1">
+          <mxGeometry x="630" y="455" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="centos-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Rolling release&lt;br&gt;• Before RHEL releases&lt;br&gt;• Development platform&lt;br&gt;• Free" vertex="1">
+          <mxGeometry x="630" y="490" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- Rocky Linux -->
+        <mxCell id="rocky-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10b981;strokeColor=#0a8560;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="820" y="450" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rocky-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🪨 ROCKY LINUX&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;RHEL clone (2021)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="830" y="455" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="rocky-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• 1:1 RHEL compatible&lt;br&gt;• Free &amp;amp; community&lt;br&gt;• Enterprise servers&lt;br&gt;• CentOS successor" vertex="1">
+          <mxGeometry x="830" y="490" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- AlmaLinux -->
+        <mxCell id="alma-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f4c81;strokeColor=#093560;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="1020" y="450" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="alma-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🔵 ALMALINUX&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;RHEL clone (2021)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1030" y="455" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="alma-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• 1:1 RHEL compatible&lt;br&gt;• CloudLinux backed&lt;br&gt;• Enterprise servers&lt;br&gt;• CentOS alternative" vertex="1">
+          <mxGeometry x="1030" y="490" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- Red Hat family arrows -->
+        <mxCell id="fed-to-rhel" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC0000;startArrow=classic;startFill=1;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="340" as="sourcePoint" />
+            <mxPoint x="820" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fed-rhel-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#666666;" value="upstream" vertex="1">
+          <mxGeometry x="780" y="315" width="50" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fed-to-centos" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#932279;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="400" as="sourcePoint" />
+            <mxPoint x="700" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rhel-to-rocky" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#10b981;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="400" as="sourcePoint" />
+            <mxPoint x="900" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rhel-to-alma" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0f4c81;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="400" as="sourcePoint" />
+            <mxPoint x="1100" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ====================== INDEPENDENT FAMILY ====================== -->
+        <mxCell id="independent-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#1793D1;" value="&lt;b&gt;INDEPENDENT&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Own package systems&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1180" y="230" width="320" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Arch -->
+        <mxCell id="arch-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1793D1;strokeColor=#1270a3;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="1200" y="280" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="arch-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🏹 ARCH LINUX&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Rolling (2002)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1210" y="285" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="arch-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Package: .pkg.tar.zst&lt;br&gt;• Manager: pacman&lt;br&gt;• Release: Rolling&lt;br&gt;• AUR: User repository&lt;br&gt;• Focus: DIY, minimalism&lt;br&gt;• &quot;I use Arch btw&quot;" vertex="1">
+          <mxGeometry x="1210" y="320" width="140" height="95" as="geometry" />
+        </mxCell>
+        
+        <!-- Gentoo -->
+        <mxCell id="gentoo-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#54487a;strokeColor=#3d3558;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="1400" y="280" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="gentoo-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🦎 GENTOO&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Source-based (2000)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1410" y="285" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="gentoo-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Package: ebuilds&lt;br&gt;• Manager: emerge&lt;br&gt;• Release: Rolling&lt;br&gt;• Compiles from source&lt;br&gt;• USE flags customize&lt;br&gt;• Maximum control" vertex="1">
+          <mxGeometry x="1410" y="320" width="140" height="95" as="geometry" />
+        </mxCell>
+        
+        <!-- Alpine -->
+        <mxCell id="alpine-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d597f;strokeColor=#094055;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="1600" y="280" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="alpine-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🏔️ ALPINE&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Minimal (2006)&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1610" y="285" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="alpine-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Package: .apk&lt;br&gt;• Manager: apk&lt;br&gt;• C Library: musl (tiny!)&lt;br&gt;• Size: ~5MB base!&lt;br&gt;• Best for: Docker&lt;br&gt;• Security focused" vertex="1">
+          <mxGeometry x="1610" y="320" width="140" height="95" as="geometry" />
+        </mxCell>
+        
+        <!-- Manjaro -->
+        <mxCell id="manjaro-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#35bf5c;strokeColor=#2a9649;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="1110" y="470" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="manjaro-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🥭 MANJARO&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;User-friendly Arch&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1120" y="475" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="manjaro-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Based on: Arch&lt;br&gt;• Manager: pacman&lt;br&gt;• GUI installer&lt;br&gt;• Delayed updates" vertex="1">
+          <mxGeometry x="1120" y="510" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- EndeavourOS -->
+        <mxCell id="endeavour-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7f3fbf;strokeColor=#5f2f9f;strokeWidth=2;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry x="1290" y="470" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="endeavour-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=14;" value="&lt;b&gt;🚀 ENDEAVOUROS&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;2&quot;&gt;Terminal-centric Arch&lt;/font&gt;" vertex="1">
+          <mxGeometry x="1300" y="475" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="endeavour-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=10;" value="• Based on: Arch&lt;br&gt;• Closer to vanilla Arch&lt;br&gt;• Community driven&lt;br&gt;• Calamares installer" vertex="1">
+          <mxGeometry x="1300" y="510" width="140" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- Arch derivatives arrows -->
+        <mxCell id="arch-to-manjaro" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#35bf5c;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1250" y="420" as="sourcePoint" />
+            <mxPoint x="1190" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arch-to-endeavour" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7f3fbf;" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1310" y="420" as="sourcePoint" />
+            <mxPoint x="1370" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ====================== COMPARISON TABLE ====================== -->
+        <mxCell id="table-header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#333333;" value="&lt;b&gt;QUICK COMPARISON&lt;/b&gt;" vertex="1">
+          <mxGeometry x="550" y="770" width="500" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Table -->
+        <mxCell id="table-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#333333;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="100" y="820" width="1400" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Table header row -->
+        <mxCell id="th-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Distro&lt;/b&gt;" vertex="1">
+          <mxGeometry x="100" y="820" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Based On&lt;/b&gt;" vertex="1">
+          <mxGeometry x="260" y="820" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Package&lt;/b&gt;" vertex="1">
+          <mxGeometry x="400" y="820" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Manager&lt;/b&gt;" vertex="1">
+          <mxGeometry x="500" y="820" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Release&lt;/b&gt;" vertex="1">
+          <mxGeometry x="600" y="820" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;C Library&lt;/b&gt;" vertex="1">
+          <mxGeometry x="720" y="820" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Init&lt;/b&gt;" vertex="1">
+          <mxGeometry x="820" y="820" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Best For&lt;/b&gt;" vertex="1">
+          <mxGeometry x="920" y="820" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;Learning&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1200" y="820" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="th-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#333333;fontColor=#ffffff;fontSize=12;" value="&lt;b&gt;RootFS&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1300" y="820" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Ubuntu Row -->
+        <mxCell id="r1-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E95420;strokeColor=#cccccc;fontColor=#ffffff;fontSize=11;" value="Ubuntu" vertex="1">
+          <mxGeometry x="100" y="860" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Debian" vertex="1">
+          <mxGeometry x="260" y="860" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value=".deb" vertex="1">
+          <mxGeometry x="400" y="860" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="apt" vertex="1">
+          <mxGeometry x="500" y="860" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="LTS (2yr)" vertex="1">
+          <mxGeometry x="600" y="860" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="glibc" vertex="1">
+          <mxGeometry x="720" y="860" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="systemd" vertex="1">
+          <mxGeometry x="820" y="860" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Beginners, desktops, servers" vertex="1">
+          <mxGeometry x="920" y="860" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#cccccc;fontSize=11;" value="⭐ Easy" vertex="1">
+          <mxGeometry x="1200" y="860" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=10;" value="ext4, 5-20GB typical" vertex="1">
+          <mxGeometry x="1300" y="860" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Fedora Row -->
+        <mxCell id="r2-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#294172;strokeColor=#cccccc;fontColor=#ffffff;fontSize=11;" value="Fedora" vertex="1">
+          <mxGeometry x="100" y="900" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="Independent" vertex="1">
+          <mxGeometry x="260" y="900" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value=".rpm" vertex="1">
+          <mxGeometry x="400" y="900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="dnf" vertex="1">
+          <mxGeometry x="500" y="900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="~6 months" vertex="1">
+          <mxGeometry x="600" y="900" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="glibc" vertex="1">
+          <mxGeometry x="720" y="900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="systemd" vertex="1">
+          <mxGeometry x="820" y="900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="Developers, newest tech" vertex="1">
+          <mxGeometry x="920" y="900" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#cccccc;fontSize=11;" value="⭐ Easy" vertex="1">
+          <mxGeometry x="1200" y="900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=10;" value="btrfs default, 10-25GB" vertex="1">
+          <mxGeometry x="1300" y="900" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Arch Row -->
+        <mxCell id="r3-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1793D1;strokeColor=#cccccc;fontColor=#ffffff;fontSize=11;" value="Arch" vertex="1">
+          <mxGeometry x="100" y="940" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Independent" vertex="1">
+          <mxGeometry x="260" y="940" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value=".pkg.tar.zst" vertex="1">
+          <mxGeometry x="400" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="pacman" vertex="1">
+          <mxGeometry x="500" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Rolling" vertex="1">
+          <mxGeometry x="600" y="940" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="glibc" vertex="1">
+          <mxGeometry x="720" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="systemd" vertex="1">
+          <mxGeometry x="820" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Power users, learning Linux internals" vertex="1">
+          <mxGeometry x="920" y="940" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#cccccc;fontSize=11;" value="⚠️ Hard" vertex="1">
+          <mxGeometry x="1200" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=10;" value="ext4, ~2-5GB minimal" vertex="1">
+          <mxGeometry x="1300" y="940" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Debian Row -->
+        <mxCell id="r4-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#A80030;strokeColor=#cccccc;fontColor=#ffffff;fontSize=11;" value="Debian" vertex="1">
+          <mxGeometry x="100" y="980" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="Independent" vertex="1">
+          <mxGeometry x="260" y="980" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value=".deb" vertex="1">
+          <mxGeometry x="400" y="980" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="apt, dpkg" vertex="1">
+          <mxGeometry x="500" y="980" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="Stable (~2yr)" vertex="1">
+          <mxGeometry x="600" y="980" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="glibc" vertex="1">
+          <mxGeometry x="720" y="980" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="systemd" vertex="1">
+          <mxGeometry x="820" y="980" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="Servers, stability-focused" vertex="1">
+          <mxGeometry x="920" y="980" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#cccccc;fontSize=11;" value="⭐⭐ Medium" vertex="1">
+          <mxGeometry x="1200" y="980" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=10;" value="ext4, 5-15GB typical" vertex="1">
+          <mxGeometry x="1300" y="980" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Alpine Row -->
+        <mxCell id="r5-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d597f;strokeColor=#cccccc;fontColor=#ffffff;fontSize=11;" value="Alpine" vertex="1">
+          <mxGeometry x="100" y="1020" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Independent" vertex="1">
+          <mxGeometry x="260" y="1020" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value=".apk" vertex="1">
+          <mxGeometry x="400" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="apk" vertex="1">
+          <mxGeometry x="500" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Rolling" vertex="1">
+          <mxGeometry x="600" y="1020" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#cccccc;fontSize=11;" value="&lt;b&gt;musl&lt;/b&gt; (tiny!)" vertex="1">
+          <mxGeometry x="720" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="OpenRC" vertex="1">
+          <mxGeometry x="820" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=11;" value="Docker containers, embedded, minimal" vertex="1">
+          <mxGeometry x="920" y="1020" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#cccccc;fontSize=11;" value="⭐⭐ Medium" vertex="1">
+          <mxGeometry x="1200" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#cccccc;fontSize=10;" value="&lt;b&gt;~5MB base!&lt;/b&gt; squashfs" vertex="1">
+          <mxGeometry x="1300" y="1020" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Rocky Row -->
+        <mxCell id="r6-distro" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#10b981;strokeColor=#cccccc;fontColor=#ffffff;fontSize=11;" value="Rocky/Alma" vertex="1">
+          <mxGeometry x="100" y="1060" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-based" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="RHEL (clone)" vertex="1">
+          <mxGeometry x="260" y="1060" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value=".rpm" vertex="1">
+          <mxGeometry x="400" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-mgr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="dnf" vertex="1">
+          <mxGeometry x="500" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-release" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="LTS (~10yr)" vertex="1">
+          <mxGeometry x="600" y="1060" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-clib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="glibc" vertex="1">
+          <mxGeometry x="720" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="systemd" vertex="1">
+          <mxGeometry x="820" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-best" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=11;" value="Enterprise servers, production" vertex="1">
+          <mxGeometry x="920" y="1060" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-learn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#cccccc;fontSize=11;" value="⭐⭐ Medium" vertex="1">
+          <mxGeometry x="1200" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-rootfs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=10;" value="ext4/xfs, 10-20GB" vertex="1">
+          <mxGeometry x="1300" y="1060" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Key Insights Box -->
+        <mxCell id="insights-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="100" y="1130" width="700" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="insights-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#1565c0;fontSize=16;" value="&lt;b&gt;💡 KEY INSIGHTS&lt;/b&gt;" vertex="1">
+          <mxGeometry x="300" y="1135" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="insights-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" value="&lt;b&gt;What gets inherited from parent distros?&lt;/b&gt;&lt;br&gt;&lt;br&gt;✅ Package format (.deb, .rpm) — Ubuntu inherits .deb from Debian&lt;br&gt;✅ Package manager (apt, dnf) — same tools across family&lt;br&gt;✅ Directory structure — follows FHS standard&lt;br&gt;✅ Init system — mostly systemd now&lt;br&gt;&lt;br&gt;❌ NOT inherited: Release schedule, default packages, repositories, branding" vertex="1">
+          <mxGeometry x="120" y="1165" width="660" height="130" as="geometry" />
+        </mxCell>
+        
+        <!-- RootFS Note Box -->
+        <mxCell id="rootfs-note-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff9800;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="830" y="1130" width="670" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rootfs-note-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#e65100;fontSize=16;" value="&lt;b&gt;📁 ROOTFS ACROSS DISTROS&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1000" y="1135" width="330" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="rootfs-note-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" value="&lt;b&gt;All distros share the same FHS structure:&lt;/b&gt;&lt;br&gt;&lt;br&gt;• /bin, /sbin, /lib → essential system binaries&lt;br&gt;• /etc → configuration files (passwd, fstab, network)&lt;br&gt;• /usr → applications and libraries&lt;br&gt;• /var → logs, caches, runtime data&lt;br&gt;• /home → user directories&lt;br&gt;&lt;br&gt;&lt;b&gt;Difference:&lt;/b&gt; Size (Alpine: 5MB vs Ubuntu: 5GB+), default filesystem (ext4/btrfs/xfs)" vertex="1">
+          <mxGeometry x="850" y="1165" width="640" height="140" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

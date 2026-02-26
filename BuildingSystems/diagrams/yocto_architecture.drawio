@@ -1,0 +1,67 @@
+<mxfile host="65bd71144e">
+    <diagram name="Yocto Simplified" id="yocto-simple">
+        <mxGraphModel dx="825" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="60" width="1120" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="YOCTO PROJECT: THE LINUX FACTORY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="20" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="input-box" value="1. THE INPUTS (User &amp; Community)" style="swimlane;horizontal=1;startSize=30;fillColor=#e7f3ff;strokeColor=#007bff;fontColor=#0056b3;fontSize=14;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="100" width="280" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="recipes" value="RECIPES (.bb)&lt;div&gt;What to build?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#007bff;fontSize=12;fontStyle=1;" parent="input-box" vertex="1">
+                    <mxGeometry x="30" y="50" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="layers" value="LAYERS (meta-*)&lt;div&gt;Where is the code?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#007bff;fontSize=12;fontStyle=1;" parent="input-box" vertex="1">
+                    <mxGeometry x="30" y="130" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="conf" value="CONFIG (local.conf)&lt;div&gt;Which hardware?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#007bff;fontSize=12;fontStyle=1;" parent="input-box" vertex="1">
+                    <mxGeometry x="30" y="210" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="upstream" value="UPSTREAM SOURCES&lt;div&gt;(GitHub, Tarballs, SVN)&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#007bff;fontSize=12;fontStyle=1;" parent="input-box" vertex="1">
+                    <mxGeometry x="65" y="320" width="150" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="engine-box" value="2. THE ENGINE (BitBake)" style="swimlane;horizontal=1;startSize=30;fillColor=#fff0f3;strokeColor=#ff4d6d;fontColor=#a4133c;fontSize=14;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="70" width="340" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="parse" value="PARSING\nReads all metadata" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#ff4d6d;fontSize=11;fontStyle=1;" parent="engine-box" vertex="1">
+                    <mxGeometry x="100" y="50" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pipeline" value="TASK PIPELINE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#ff4d6d;fontSize=13;fontStyle=1;" parent="engine-box" vertex="1">
+                    <mxGeometry x="40" y="150" width="260" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-flow" value="FETCH&lt;div&gt;&amp;nbsp;SOURCE&amp;nbsp;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;UNPACK&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;PATCH&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;CONFIGURE&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;COMPILE&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;INSTALL (Image Dist)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;PACKAGE (ipk/rpm)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;ROOTFS (Image Creation)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontStyle=1;" parent="pipeline" vertex="1">
+                    <mxGeometry x="10" y="140" width="240" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="output-box" value="3. THE OUTPUTS (Deploy)" style="swimlane;horizontal=1;startSize=30;fillColor=#f6fff8;strokeColor=#2d6a4f;fontColor=#1b4332;fontSize=14;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="810" y="100" width="280" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="sd-image" value="OS IMAGE (.wic)&lt;div&gt;Burn to SD/EMMC&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=12;fontStyle=1;" parent="output-box" vertex="1">
+                    <mxGeometry x="40" y="60" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="kernel-file" value="LINUX KERNEL&lt;div&gt;(zImage / DeviceTree)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=12;fontStyle=1;" parent="output-box" vertex="1">
+                    <mxGeometry x="40" y="150" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="pkg-feeds" value="PACKAGE FEEDS&lt;div&gt;(OTA Updates)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=12;fontStyle=1;" parent="output-box" vertex="1">
+                    <mxGeometry x="40" y="240" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="sdk-out" value="SDK / TOOLCHAIN&lt;div&gt;For App Developers&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2d6a4f;fontSize=12;fontStyle=1;" parent="output-box" vertex="1">
+                    <mxGeometry x="40" y="330" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow1" value="PROVIDE" style="endArrow=block;html=1;strokeWidth=3;strokeColor=#007bff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;fontSize=11;fontColor=#0056b3;" parent="1" source="input-box" target="engine-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow2" value="PRODUCE" style="endArrow=block;html=1;strokeWidth=3;strokeColor=#ff4d6d;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;fontSize=11;fontColor=#a4133c;" parent="1" source="engine-box" target="output-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="note" value="Simplified Summary: Yocto takes your configuration (Recipes/Layers) and the code from the internet, uses BitBake to build everything from scratch, and outputs a custom Linux image unique to your hardware." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;fontColor=#495057;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="630" width="1040" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

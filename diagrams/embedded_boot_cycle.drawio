@@ -1,0 +1,283 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.5.2">
+  <diagram name="Embedded Boot Cycle" id="embedded-boot-main">
+    <mxGraphModel dx="1037" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Embedded Linux Boot Cycle with Secure Boot&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="500" x="400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="power-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="200" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="power-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#996600;" value="&lt;b&gt;STAGE 0: POWER&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="160" x="60" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="power-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="⚡ Power Applied&#xa;↓&#xa;POR Circuit&#xa;(Power-On Reset)&#xa;↓&#xa;Voltages Stable" vertex="1">
+          <mxGeometry height="80" width="180" x="50" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-0-1" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="200" as="sourcePoint" />
+            <mxPoint x="140" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bootrom-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="140" width="200" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="bootrom-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#336699;" value="&lt;b&gt;STAGE 1: BOOT ROM&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="180" x="50" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="bootrom-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="On-chip ROM (~64KB)&#xa;Burned into silicon&#xa;IMMUTABLE&#xa;&#xa;→ CPU Reset Vector&#xa;→ Basic HW init&#xa;→ Check boot sources" vertex="1">
+          <mxGeometry height="100" width="190" x="45" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="secure-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="🔒" vertex="1">
+          <mxGeometry height="30" width="30" x="210" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-1-2" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="380" as="sourcePoint" />
+            <mxPoint x="140" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="verify-1" parent="1" style="text;html=1;strokeColor=none;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="🔐 Verify&#xa;Signature" vertex="1">
+          <mxGeometry height="30" width="70" x="150" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="spl-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="200" x="40" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="spl-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#2d6a2d;" value="&lt;b&gt;STAGE 2: SPL / FSBL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="180" x="50" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="spl-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Secondary Program Loader&#xa;Runs from SRAM (~256KB)&#xa;&#xa;1. Init DRAM controller&#xa;2. Setup clocks/PLLs&#xa;3. Load U-Boot to DRAM&#xa;4. Jump to U-Boot" vertex="1">
+          <mxGeometry height="120" width="190" x="45" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="secure-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="🔒" vertex="1">
+          <mxGeometry height="30" width="30" x="210" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-2-3" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="580" as="sourcePoint" />
+            <mxPoint x="140" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="verify-2" parent="1" style="text;html=1;strokeColor=none;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="🔐 Verify&#xa;Signature" vertex="1">
+          <mxGeometry height="30" width="70" x="150" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="uboot-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="180" width="200" x="40" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="uboot-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#663399;" value="&lt;b&gt;STAGE 3: U-BOOT&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="160" x="60" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="uboot-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Universal Bootloader&#xa;Runs from DRAM&#xa;&#xa;1. Init peripherals (UART)&#xa;2. Console interface&#xa;3. Load kernel + DTB&#xa;4. Pass control to kernel&#xa;&#xa;bootcmd: bootz $kernel $fdt" vertex="1">
+          <mxGeometry height="140" width="190" x="45" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="secure-3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="🔒" vertex="1">
+          <mxGeometry height="30" width="30" x="210" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-3-4" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="800" as="sourcePoint" />
+            <mxPoint x="140" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="verify-3" parent="1" style="text;html=1;strokeColor=none;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="🔐 Verify&#xa;Signature" vertex="1">
+          <mxGeometry height="30" width="70" x="150" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="kernel-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="200" x="40" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="kernel-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#993333;" value="&lt;b&gt;STAGE 4: LINUX KERNEL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="180" x="50" y="845" as="geometry" />
+        </mxCell>
+        <mxCell id="kernel-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="zImage / Image&#xa;&#xa;1. Decompress&#xa;2. Parse Device Tree&#xa;3. Init drivers&#xa;4. Mount rootfs&#xa;5. Execute /sbin/init" vertex="1">
+          <mxGeometry height="120" width="190" x="45" y="865" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-4-5" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="1000" as="sourcePoint" />
+            <mxPoint x="140" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="app-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100" width="200" x="40" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="app-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#996600;" value="&lt;b&gt;STAGE 5: APPLICATION&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="180" x="50" y="1045" as="geometry" />
+        </mxCell>
+        <mxCell id="app-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="init → services → app&#xa;&#xa;🎉 Device Ready!" vertex="1">
+          <mxGeometry height="60" width="180" x="50" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Memory Evolution During Boot&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="280" x="320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-early-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="200" width="180" x="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-early-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;EARLY BOOT&lt;/b&gt;&#xa;(Boot ROM + SPL)" vertex="1">
+          <mxGeometry height="30" width="160" x="310" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-rom" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Boot ROM&#xa;(64KB)" vertex="1">
+          <mxGeometry height="40" width="140" x="320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-sram" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="SRAM (256KB)&#xa;← SPL runs here" vertex="1">
+          <mxGeometry height="40" width="140" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-dram-empty" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" value="DRAM&#xa;✗ NOT READY" vertex="1">
+          <mxGeometry height="50" width="140" x="320" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-late-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="200" width="180" x="520" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-late-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;LATE BOOT&lt;/b&gt;&#xa;(U-Boot + Kernel)" vertex="1">
+          <mxGeometry height="30" width="160" x="530" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-uboot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="U-Boot&#xa;@ 0x80000000" vertex="1">
+          <mxGeometry height="35" width="140" x="540" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-kernel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Kernel (zImage)&#xa;@ 0x80800000" vertex="1">
+          <mxGeometry height="35" width="140" x="540" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-dtb" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Device Tree&#xa;@ 0x83000000" vertex="1">
+          <mxGeometry height="35" width="140" x="540" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-free" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;" value="Free / Rootfs" vertex="1">
+          <mxGeometry height="30" width="140" x="540" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="secure-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;🔐 Secure Boot Chain of Trust&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="380" x="320" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="rot-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="140" x="300" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="rot-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;ROOT OF TRUST&lt;/b&gt;&#xa;&#xa;OTP Fuses&#xa;Public Key Hash" vertex="1">
+          <mxGeometry height="70" width="130" x="305" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-rot-spl" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#b85450;fontColor=#b85450;" value="verifies">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="440" y="430" as="sourcePoint" />
+            <mxPoint x="500" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="spl-sig-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="140" x="500" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="spl-sig-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;SPL&lt;/b&gt;&#xa;&#xa;Signed with&#xa;Vendor Key" vertex="1">
+          <mxGeometry height="70" width="130" x="505" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-spl-uboot" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;fontColor=#82b366;" value="verifies">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="470" as="sourcePoint" />
+            <mxPoint x="570" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uboot-sig-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="140" x="500" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="uboot-sig-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;U-BOOT&lt;/b&gt;&#xa;&#xa;Signed with&#xa;SPL Key" vertex="1">
+          <mxGeometry height="70" width="130" x="505" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-uboot-kernel" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#9673a6;fontColor=#9673a6;" value="verifies">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="590" as="sourcePoint" />
+            <mxPoint x="570" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kernel-sig-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="140" x="500" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="kernel-sig-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;KERNEL + DTB&lt;/b&gt;&#xa;&#xa;Signed with&#xa;U-Boot Key" vertex="1">
+          <mxGeometry height="70" width="130" x="505" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="chain-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="220" width="180" x="300" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="chain-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;How It Works&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="160" x="310" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="chain-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="1. OTP fuses contain hash&#xa;   of public key (burned&#xa;   at factory, permanent)&#xa;&#xa;2. Boot ROM verifies SPL&#xa;   signature against hash&#xa;&#xa;3. SPL verifies U-Boot&#xa;&#xa;4. U-Boot verifies kernel&#xa;&#xa;5. If ANY step fails →&#xa;   BOOT HALTS" vertex="1">
+          <mxGeometry height="185" width="165" x="310" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="sources-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Boot Source Selection&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="750" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sources-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="220" width="280" x="720" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="source-emmc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="1️⃣ eMMC Flash" vertex="1">
+          <mxGeometry height="35" width="110" x="740" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="source-sd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="2️⃣ SD Card" vertex="1">
+          <mxGeometry height="35" width="110" x="870" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="source-qspi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="3️⃣ QSPI/NOR" vertex="1">
+          <mxGeometry height="35" width="110" x="740" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="source-usb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="4️⃣ USB (DFU)" vertex="1">
+          <mxGeometry height="35" width="110" x="870" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="source-uart" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="5️⃣ UART Serial" vertex="1">
+          <mxGeometry height="35" width="110" x="740" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="source-net" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="6️⃣ Network/TFTP" vertex="1">
+          <mxGeometry height="35" width="110" x="870" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="sources-note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="Order set by:&#xa;• GPIO boot pins&#xa;• OTP fuses&#xa;• Strapping resistors" vertex="1">
+          <mxGeometry height="15" width="240" x="740" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="dtb-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Device Tree (DTB)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="750" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="dtb-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="320" width="280" x="720" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="dtb-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Courier New;fontSize=11;" value="&lt;b&gt;Hardware Description File&lt;/b&gt;&#xa;&#xa;.dts (source) → .dtb (binary)&#xa;&#xa;Tells kernel about:&#xa;• CPU type &amp; count&#xa;• Memory size &amp; location&#xa;• Peripheral addresses&#xa;• Interrupt mappings&#xa;• Pin configurations&#xa;&#xa;&lt;b&gt;Example:&lt;/b&gt;&#xa;───────────────────&#xa;/ {&#xa;  model = &quot;My Board&quot;;&#xa;  &#xa;  memory@80000000 {&#xa;    reg = &lt;0x80000000&#xa;           0x40000000&gt;;&#xa;  };&#xa;  &#xa;  uart0: serial@ff000000 {&#xa;    compatible = &quot;ns16550&quot;;&#xa;  };&#xa;};" vertex="1">
+          <mxGeometry height="305" width="260" x="730" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="130" width="280" x="720" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="80" x="820" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="730" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-1-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="Boot ROM" vertex="1">
+          <mxGeometry height="20" width="80" x="755" y="757" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="730" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-2-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="SPL / FSBL" vertex="1">
+          <mxGeometry height="20" width="80" x="755" y="777" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="730" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-3-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="U-Boot" vertex="1">
+          <mxGeometry height="20" width="80" x="755" y="797" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="730" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-4-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="Kernel" vertex="1">
+          <mxGeometry height="20" width="80" x="755" y="817" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="730" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-5-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="Device Tree" vertex="1">
+          <mxGeometry height="20" width="80" x="755" y="837" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-lock" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="🔒 = Secure Boot Stage" vertex="1">
+          <mxGeometry height="20" width="140" x="850" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-verify" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" value="🔐 = Signature Verified" vertex="1">
+          <mxGeometry height="20" width="140" x="850" y="780" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
